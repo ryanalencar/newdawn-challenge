@@ -15,9 +15,7 @@ export default function renderItem({ item }) {
     >
       <Card.Cover
         source={{
-          uri:
-            item.snippet.thumbnails.maxres.url ||
-            'https://reactnative.dev/img/tiny_logo.png'
+          uri: item.snippet.thumbnails.high.url
         }}
       />
       <Card.Title
@@ -26,9 +24,9 @@ export default function renderItem({ item }) {
         left={() => (
           <Image
             source={{
-              uri: 'https://reactnative.dev/img/tiny_logo.png'
+              uri: item.channelLogo
             }}
-            style={{ width: 24, height: 24 }}
+            style={{ width: 36, height: 36 }}
           />
         )}
         right={(props) => (
