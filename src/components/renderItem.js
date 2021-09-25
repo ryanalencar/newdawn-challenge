@@ -27,6 +27,11 @@ export default function renderItem({ item }) {
               uri: item.channelLogo
             }}
             style={{ width: 36, height: 36 }}
+            onPress={() =>
+              Linking.openURL(
+                `https://www.youtube.com/c/${item.snippet.channelTitle}`
+              )
+            }
           />
         )}
         right={(props) => (
